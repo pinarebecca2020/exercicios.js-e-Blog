@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var quantidade = prompt('Quantos números você quer inserir? ');
+        var index = 1;
+        var maiorUm = 0;
+        var maiorDois = 0;
+
+        while (index <= quantidade) {
+            var valor = prompt('Digite seu valor ' + index);
+
+            if (valor > maiorUm && valor != 0) {
+                maiorUm = valor;
+                console.log('Maior um ' + maiorUm);
+            }
+
+            if (valor > maiorUm && valor != maiorUm) {
+                maiorDois = valor;
+                console.log('Maior dois ' + maiorDois);
+
+            }
+
+            index++;
+        }
+        console.log('A multiplicação dos dois maiores números é ' + (maiorDois * maiorUm));
+    </script>
+</body>
+
+</html>

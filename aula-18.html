@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array1 = [];
+        var array2 = [];
+        var juntaDoisArrays = [];
+        var somaNum;
+
+        function somaPos(array1, array2) {
+            var valorLido1;
+            var valorLido2;
+            do {
+                valorLido1 = parseInt(prompt("Entre com os números para serem inseridos no primeiro array. E para finalizar as inserções, digite 01) ."));
+                array1.push(valorLido1); //insere o valor lido no último lugar do array
+            } while (valorLido1 != 01);
+            array1.pop(); //exclui o último elemento lido e incluso, no caso o 01 que é o codigo de saída
+            console.log(array1);
+            do {
+                valorLido2 = parseInt(prompt("Entre com os números para serem inseridos no segundo array. E para finalizar as inserções, digite 01."));
+                array2.push(valorLido2);
+            } while (valorLido2 != 01);
+            array2.pop();
+            //   console.log(array2);
+            juntaDoisArrays = array1.concat(array2); //junta os dois arrays em somente um
+            //    console.log(juntaDoisArrays);
+            somaNum = 0;
+            var i = 0;
+            for (i; i < juntaDoisArrays.length; i++) {
+                while (juntaDoisArrays[i] <= 0) { //serve para retirar os números negativos do array, deixando somente os inteiros positivos
+                    juntaDoisArrays.splice(i, 1);
+                    //        console.log(juntaDoisArrays);
+                }
+                somaNum = juntaDoisArrays[i] + somaNum; //vai somando os valores inteiros positivos
+                //    console.log(somaNum);
+            }
+            console.log("A soma dos números inteiros positivos dos dois arrays é:" + somaNum);
+        }
+        somaPos(array1, array2, juntaDoisArrays);
+    </script>
+</body>
+
+</html>

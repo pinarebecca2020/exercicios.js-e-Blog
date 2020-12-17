@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            font-family: 'manrope', sans-serif;
+        }
+        
+        table {
+            text-align: center;
+            padding: 30px;
+            background: black;
+            color: white;
+            border: none;
+            margin: 10% auto;
+        }
+        
+        tr {
+            background: red;
+        }
+        
+        td {
+            padding: 50px 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <table border="1">
+            <tr>
+                <td>Inflação Tomate</td>
+                <td>Inflação Arroz</td>
+                <td>Inflação Cenoura</td>
+                <td>Inflação Média</td>
+            </tr>
+            <tr>
+                <td>Tomate</td>
+                <td>Arroz</td>
+                <td>Cenoura</td>
+                <td>Média</td>
+            </tr>
+
+        </table>
+
+        <script>
+            var tomate1 = 3.3;
+            var tomate2 = 4.7;
+            var arroz1 = 2.99;
+            var arroz2 = 3.25;
+            var cenoura1 = 3.99;
+            var cenoura2 = 4.14;
+
+            function pulaLinha() {
+                document.write("<br><br>")
+            };
+
+            function inflação(valor1, valor2) {
+
+                return (valor2 - valor1) / valor1 * 100;
+            };
+            var inflaçãotom = Math.round(inflação(tomate1, tomate2));
+            var inflaçãoarroz = Math.round(inflação(arroz1, arroz2));
+            var inflaçãocenoura = Math.round(inflação(cenoura1, cenoura2));
+
+            function mostrarResultado(resultado) {
+                return document.write("A inflação do alimento é:" + resultado, "% <br>")
+            };
+
+            function mediaInflacao(media1, media2, media3) {
+                return (media1 + media2 + media3) / 3;
+            }
+
+            function estimativaInfla(media) {
+                return (media) / 6;
+            }
+
+            var media = Math.round(mediaInflacao(inflaçãoarroz, inflaçãotom, inflaçãocenoura));
+            var estimativa = Math.round(estimativaInfla(media));
+            estimativaInfla();
+            mediaInflacao();
+            inflação();
+            mostrarResultado(inflaçãotom);
+            mostrarResultado(inflaçãoarroz);
+            mostrarResultado(inflaçãocenoura);
+            document.write("A média da inflação do alimento é:" + media, "% <br>");
+            document.write("A estimativa da inflação por dia, durante o periodo de 6 dias é: " + estimativa, "% <br>");
+        </script>
+    </body>
+
+</html>

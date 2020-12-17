@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function motorista(idadeMoto, idadeDir) {
+            var idadeMoto = parseInt(prompt("Entre com a sua idade: "));
+            var idadeDir = parseInt(prompt("Qual a idade em que é permitido dirigir no seu país: "));
+
+            if (idadeMoto >= idadeDir) {
+                console.log("Você pode dirigir!");
+            } else {
+                console.log("Você não pode dirigir!");
+            }
+
+        }
+
+        function bebedeira(idadeUsu, idadeBeb) {
+            var idadeUsu = parseInt(prompt("Entre com a sua idade:"));
+            var idadeBeb = parseInt(prompt("Qual a idade que é permitido beber no seu país?"));
+            if (idadeUsu == idadeBeb || idadeUsu > idadeBeb) {
+                console.log("Você pode Beber!!");
+            } else {
+                console.log("Você não pode beber!");
+            }
+        }
+
+        function semaforo(verde, amarelo, vermelho) {
+            var semáforo = prompt("Entre com a cor do semáforo:");
+            switch (semáforo) {
+                case 'verde':
+                    console.log("pode passar");
+                    break;
+                case 'amarelo':
+                    console.log("melhor freiar");
+                    break;
+                case 'vermelho':
+                    console.log("Pare já");
+                    break;
+                default:
+                    console.log("Cor inválida!");
+            }
+        }
+
+        function menuBebidas() {
+            console.log("1-Refrigerante \n 2-Suco \n 3-Água");
+            var escolha = parseInt(console.log("Entre com a sua escolha:"));
+            console.log("Sua escolha: " + escolha);
+        }
+
+        motorista();
+    </script>
+</body>
+
+</html>

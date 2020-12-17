@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var qtdLar = parseInt(prompt("Entre com o número de laranjas:"));
+        var qtdViz = parseInt(prompt("Entre com o número de vizinhos:"));
+
+        function divLaranjas(qtdLar, qtdViz) {
+            return Math.floor(qtdLar / qtdViz);
+
+        }
+
+        function sobraJose(qtdLar, qtdViz, divisão) {
+
+            var sobra = qtdLar - (divisão * qtdViz);
+            console.log("Restam " + sobra + " laranjas para Joselito")
+            return sobra;
+        }
+
+        var divisão = divLaranjas(qtdLar, qtdViz);
+        sobraJose(qtdLar, qtdViz, divisão);
+    </script>
+
+</body>
+
+</html>
